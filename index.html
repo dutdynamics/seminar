@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUT Dynamics Seminar</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    
+    <!-- Load MathJax from CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 30px; 
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+        }
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .section-icon {
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .upcoming-section .section-header {
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+        .upcoming-section .section-icon {
+            background: #e8f5e8;
+            color: #27ae60;
+        }
+        
+        .past-section .section-header {
+            border-color: #7f8c8d;
+            color: #7f8c8d;
+        }
+        .past-section .section-icon {
+            background: #ecf0f1;
+            color: #7f8c8d;
+        }
+        
+        .seminar { 
+            background: white;
+            border-left: 4px solid;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .seminar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+        
+        .upcoming-seminar {
+            border-left-color: #27ae60;
+        }
+        .past-seminar {
+            border-left-color: #7f8c8d;
+            opacity: 0.9;
+        }
+        
+        .seminar-title {
+            color: #2c3e50;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f8f9fa;
+        }
+        
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .meta-item strong {
+            min-width: 80px;
+            color: #555;
+            font-weight: 600;
+        }
+        .meta-item span {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        .description {
+            padding: 20px 0;
+        }
+        
+        .math-example {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .math-example p {
+            margin: 8px 0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        .upcoming-badge {
+            background: #27ae60;
+            color: white;
+        }
+        .past-badge {
+            background: #7f8c8d;
+            color: white;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #7f8c8d;
+            background: white;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .empty-state p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .meta-info {
+                grid-template-columns: 1fr;
+            }
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>DUT Dynamics Seminar</h1>
+        <p>Fall 2025 • Weekly Seminars</p>
+    </div>
+    
+    <!-- UPCOMING EVENTS SECTION -->
+    <div class="upcoming-section">
+        <div class="section-header">
+            <span class="section-icon">📅</span>
+            <h2>Upcoming Events</h2>
+        </div>
+        
+        <div class="seminar upcoming-seminar">
+            <h2 class="seminar-title">
+                The Existence of Full-Dimensional KAM Tori for Nonlinear
+		Klein-Gordon Equation from Relativistic to Non-Relativistic Regimes
+                <span class="status-badge upcoming-badge">Upcoming</span>
+            </h2>
+            
+            <div class="meta-info">
+	      <div class="meta-item">
+                <strong>报告人:</strong>
+                <span>李思铭 (数学科学学院) </span>
+              </div>
+              <div class="meta-item">
+		<strong>日期:</strong>
+                <span>2025年9月23日</span>
+              </div>
+              <div class="meta-item">
+                <strong>时间:</strong>
+                <span>10:00 AM - 11:30 AM</span>
+              </div>
+              <div class="meta-item">
+                <strong>地点:</strong>
+                <span>数学科学学院224</span>
+              </div>
+            </div>
+
+	    <div class="description">
+              <p>In this talk, I will introduction to the fundamental theory of
+		Hamiltonian systems, including key concepts such as integrable
+		systems, KAM tori, and KAM theory. Following this, I will explore the
+		almost-periodic solutions of the  one-dimensional nonlinear
+		Klein-Gordon (NLKG) equation under periodic boundary  conditions, with
+		the aim of demonstrating their existence and linear stability in the
+		limit from the relativistic ($𝑐=1$) to the non-relativistic ($𝑐\to\infty$)
+		regime. The research steps are as follows: transform this equation into an infinite-dimensional 
+		Hamiltonian system；define the Hamiltonian norm to quantify the perturbation terms； 
+		construct the KAM iteration to eliminate specific perturbation terms；prove the 
+		convergence of the iteration to establish the existence and linear stability of 
+		full-dimensional KAM tori. The methodological foundation of this study is derived 
+		from the approach outlined in Bourgain. J. Funct. Anal 229(1) 62–94, and it is a collaborative effort with
+		Cong Hongzi and Wu Xiaoqing.</p>
+            </div>
+	    
+	</div>
+    </div>
+    
+    <!-- PAST EVENTS SECTION -->
+    <div class="past-section">
+        <div class="section-header">
+            <span class="section-icon">📚</span>
+            <h2>Past Events</h2>
+        </div>
+    </div>
+</body>
+</html>
