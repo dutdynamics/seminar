@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUT Dynamics Seminar</title>
-    
+    <title>DUT Dynamics Seminar - Fall 2026</title>
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -13,16 +13,16 @@
             }
         };
     </script>
-    
+
     <!-- Load MathJax -->
     <script id="MathJax-script" async src="https://cdn.bootcdn.net/ajax/libs/mathjax/4.0.0/tex-mml-chtml.js"></script>
-    
+
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-            max-width: 1000px; 
-            margin: 0 auto; 
-            padding: 30px; 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
             line-height: 1.6;
             color: #333;
             background: #f5f7fa;
@@ -30,18 +30,17 @@
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 20px;
-            background: white;
             padding: 30px;
+            background: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
+
         .section-header {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin: 40px 0 20px 0;
+            margin: 40px 0 20px;
             padding-bottom: 10px;
             border-bottom: 3px solid;
         }
@@ -54,7 +53,7 @@
             padding: 10px;
             border-radius: 8px;
         }
-        
+
         .upcoming-section .section-header {
             border-color: #27ae60;
             color: #27ae60;
@@ -63,17 +62,16 @@
             background: #e8f5e8;
             color: #27ae60;
         }
-        
-        .past-section .section-header {
+        .archive-section .section-header {
             border-color: #7f8c8d;
             color: #7f8c8d;
         }
-        .past-section .section-icon {
+        .archive-section .section-icon {
             background: #ecf0f1;
             color: #7f8c8d;
         }
-        
-        .seminar { 
+
+        .seminar {
             background: white;
             border-left: 4px solid;
             padding: 25px;
@@ -86,31 +84,26 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.12);
         }
-        
         .upcoming-seminar {
             border-left-color: #27ae60;
         }
-        .past-seminar {
-            border-left-color: #7f8c8d;
-            opacity: 0.9;
-        }
-        
+
         .seminar-title {
             color: #2c3e50;
             margin-top: 0;
             padding-bottom: 10px;
             border-bottom: 2px solid #f8f9fa;
         }
-        
+
         .meta-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin: 20px 0;
-            background: #f8f9fa;
             padding: 20px;
-            border-radius: 8px;
+            background: #f8f9fa;
             border: 1px solid #e9ecef;
+            border-radius: 8px;
         }
         .meta-item {
             display: flex;
@@ -126,58 +119,49 @@
             color: #2c3e50;
             font-weight: 500;
         }
-		
-		.meta-info .meta-item:first-child {
-		grid-column: 1 / -1;
-		margin-bottom: 5px;
-		}
-        
+        .meta-info .meta-item:first-child {
+            grid-column: 1 / -1;
+            margin-bottom: 5px;
+        }
+
         .description {
             padding: 20px 0;
         }
-        
-        .math-example {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        .math-example p {
-            margin: 8px 0;
-        }
-        
         .status-badge {
             display: inline-block;
             padding: 4px 12px;
+            margin-left: 15px;
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: 600;
-            margin-left: 15px;
         }
         .upcoming-badge {
             background: #27ae60;
             color: white;
         }
-        .past-badge {
-            background: #7f8c8d;
+
+        .archive-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .semester-link {
+            display: inline-block;
+            padding: 10px 18px;
             color: white;
+            background: #7f8c8d;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
         }
-        
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #7f8c8d;
-            background: white;
-            border-radius: 12px;
-            margin: 20px 0;
+        .semester-link:hover {
+            background: #606b6c;
         }
-        .empty-state p {
-            font-size: 1.1em;
-            margin: 10px 0;
-        }
-        
+
         @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
             .meta-info {
                 grid-template-columns: 1fr;
             }
@@ -193,616 +177,70 @@
 <body>
     <div class="header">
         <h1>DUT Dynamics Seminar</h1>
-        <p>Spring 2026 • Weekly Seminars</p>
+        <p>Fall 2026 &bull; Weekly Seminars</p>
     </div>
 
-        <div id="home" class="info">
+    <div id="home" class="info">
         <p>
-	  For information on the related DUT Differential Equations Seminar
-	  (DDES), please
-	  check <a href="https://dutdynamics.github.io/ddes/">here</a>.
-	</p>
+            For information on the related DUT Differential Equations Seminar
+            (DDES), please check <a href="https://dutdynamics.github.io/ddes/">here</a>.
+        </p>
+    </div>
 
-    
     <!-- UPCOMING EVENTS SECTION -->
-
     <div class="upcoming-section">
         <div class="section-header">
             <span class="section-icon">📅</span>
             <h2>Upcoming Events</h2>
         </div>
 
-
-
-	    <div class="seminar upcoming-seminar">
+        <div class="seminar upcoming-seminar">
             <h2 class="seminar-title">
-              Kolmogorov Invariant Torus Theorem for Weakly Interacting
-Particles I: Full Dimensional Tori
-			  <span class="status-badge upcoming-badge">Upcoming</span>
+                The Fermi&ndash;Pasta&ndash;Ulam system and the Korteweg&ndash;de&ndash;Vries equation:
+                A low-regularity continuum limit
+                <span class="status-badge upcoming-badge">Upcoming</span>
             </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>刘镇玮(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年6月30日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>In this talk, I will explain the Poisson bracket estimates in the paper
-<em>Kolmogorov Invariant Torus Theorem for Weakly Interacting
-Particles I: Full Dimensional Tori</em>. This part plays a key role in the
-functional setting of the infinite-dimensional KAM iteration. The main goal is to show that the Poisson bracket is well controlled in
-the analytic Banach spaces $\mathcal Y_{\beta,\rho,\sigma,O}$. More
-precisely, if two Hamiltonians $h$ and $g$ belong to suitable spaces,
-then their Poisson bracket $\{h,g\}$ still belongs to the same type of
-space, but on a slightly smaller analytic domain. The corresponding
-estimate is of the form
 
+            <div class="meta-info">
+                <div class="meta-item">
+                    <strong>报告人:</strong>
+                    <span>Herbert Koch (University of Bonn)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>日期:</strong>
+                    <span>2026年9月1日</span>
+                </div>
+                <div class="meta-item">
+                    <strong>时间:</strong>
+                    <span>10:00 AM - 11:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <strong>地点:</strong>
+                    <span>数学科学学院115</span>
+                </div>
+            </div>
 
-\[
-\|\{h,g\}\|_{\beta,\rho-r,\sigma-s,O}
-\lesssim
-C(r,s,\rho,\sigma,\rho_*,\sigma_*)
-\|h\|_{\beta,\rho,\sigma,O}
-\|g\|_{\beta,\rho_*,\sigma_*,O}.
-\]
-
-This estimate is important because the KAM scheme repeatedly uses
-Hamiltonian flows and Lie transforms, whose expansions involve
-Poisson brackets. In the long-range setting considered in this paper,
-the Hamiltonian vector field does not decay with respect to the particle
-index, so the usual short-range estimates are not sufficient. Therefore,
-the Poisson bracket estimate provides the analytic control needed to
-close the inductive KAM step.
-	      	</p>
-        </div>
-	</div>			
-		
-</div>	
-    
-    
-    <!-- PAST EVENTS SECTION -->
-
-	
-    <div class="past-section">
-        <div class="section-header">
-            <span class="section-icon">📚</span>
-            <h2>Past Events</h2>
-        </div>
-
-		<div class="seminar past-seminar">
-            <h2 class="seminar-title">
-			  Splitting of separatrices and the Melnikov function
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Jos&eacute; Lamas (数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年6月23日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
+            <div class="description">
+                <p>
+                    For the infinite Fermi&ndash;Pasta&ndash;Ulam (FPU) system, general
+                    solutions can be approximated by counter-propagating waves associated
+                    with solutions to the Korteweg&ndash;de Vries (KdV) equation as the lattice
+                    mesh size goes to zero. The Toda lattice is a special case of the FPU
+                    system. We show that, by exploiting the conservation of the FPU
+                    Hamiltonian, the continuum limit from the FPU system to the KdV equation
+                    with $L^2$-level initial data holds in appropriate norms on an arbitrary
+                    time interval, thereby answering an open question posed by Hong, Kwak,
+                    and Yang (2021). Moreover, for the local-in-time continuum limit of the
+                    FPU system to the KdV equation, we lower the required Sobolev regularity
+                    to $H^s$ with $s &gt; -3/4$. To establish this low-regularity continuum
+                    limit, we prove key trilinear estimates that are sharp up to the endpoint
+                    by combining linear estimates, the transversality of characteristic
+                    curves, and multilinear dispersive smoothing properties of the linear
+                    FPU flow. This is joint work with Ruoyuan Liu.
+                </p>
             </div>
         </div>
-	    <div class="description">
-    	  <p>The Poincar&eacute–Melnikov method gives a classical criterion for
-			detecting transverse homoclinic intersections in small time-periodic
-			perturbations of planar systems. The starting point is an autonomous
-			system with a hyperbolic saddle and a homoclinic orbit. In many
-			mechanical Hamiltonian examples, such as the pendulum, this orbit
-			appears as a separatrix loop contained in the critical energy level
-			of the saddle. In this talk, we first discuss how these separatrices
-			arise in one degree of freedom Hamiltonian systems, emphasizing the
-			pendulum as the guiding example. We then introduce a small
-			time-periodic perturbation and the associated stroboscopic
-			Poincar&eacute map. The stable and unstable manifolds of the
-			perturbed saddle generally split, and the Melnikov function gives
-			the first-order signed distance between them. Finally, we explain
-			why a simple zero of the Melnikov function implies a transverse
-			homoclinic intersection and, consequently, horseshoe dynamics.
-	      	</p>
-        </div>
-	</div>				
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Slow propagation velocities in quantum many-body dynamics
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>张景宣(清华大学丘成桐数学科学中心) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年6月16日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    	  <p>We study the localization bounds for quantum many-body systems at
-    	  positive spatial density in disordered media. Specifically, we
-    	  consider dynamics of interacting bosons in the mean-field regime,
-    	  subjected to a disordered potential which is either random or
-    	  quasi-periodic. We prove that starting from a factorized and spatially
-    	  localized initial wave function, the corresponding time-evolution
-    	  propagates with a small velocity due to the disorder. This provides an
-    	  example of a disordered quantum many-body system with provably slow
-    	  transport behavior in any spatial dimension. The main technical
-    	  novelty in the proof is an interaction picture analysis relative to
-    		the localization bounds of the associated one-body dynamics.			
-	      	</p>
-        </div>
-	</div>	
-		
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              The Smale horseshoe and the geometry of chaotic motion (Part II)
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Jos&eacute; Lamas (数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年6月9日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>The Smale horseshoe provides one of the clearest geometric
-    		mechanisms by which deterministic systems generate chaotic
-    		dynamics. Beginning with a simple process of stretching,
-    		contracting and folding a region of the phase space, the
-    		horseshoe map produces an invariant Cantor set on which the
-    		dynamics is conjugate to the full shift of two symbols. This
-    		symbolic description reveals the essential features of chaos:
-    		sensitive dependence on initial conditions, dense periodic
-    		orbits, and topological transitivity. In the context of
-    		Hamiltonian systems, the horseshoe is especially important
-    		because it models the dynamics created near transverse
-    		intersections of stable and unstable manifolds of hyperbolic
-    		saddles. Such intersections generate homoclinic tangles, which
-    		are the geometric source of chaotic motion in many conservative
-    		systems. Thus, the horseshoe map serves as a bridge between
-    		local hyperbolic manifold geometry and chaos. This talk
-    		introduces the horseshoe construction as a foundational example
-    		before studying how similar structures arise in Hamiltonian
-    		systems through homoclinic intersections and separatrix splitting.
-	      	</p>
-        </div>
-	</div>		
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Connected sum of symplectic manifolds
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Samuel Adrian Antz (数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年6月2日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    	  <p>
-			A connected sum glues connected topological or smooth manifolds of the same
-			dimension together by removing a disc in both and identifying the boundary
-			spheres with each other. In two dimensions, it can be used to fully classify
-			closed oriented surfaces, which are all connected sums of two-dimensional
-			tori. In three dimensions, it can also be used in the handle body
-			decomposition. In four dimensions, it seems that no classification exists,
-			although there are many hints. It's assumed, although without even a concrete
-			conjecture formulated yet, that symplectic 4-manifolds play a crucial role as
-			the fundamental building blocks of smooth 4-manifolds. A main hint was obtained
-			by Clifford Taubes from Seiberg-Witten theory: It claims, that the connected sum
-			of symplectic 4-manifolds, hence which posess the non-trivial symplectic 2-form,
-			but both additionally allow non-trivial self-dual 2-forms, cannot be symplectic
-			as well. Hence these 4-manifolds cannot be decomposed in a non-trivial way
-			including others of them again.
-	      </p>
-        </div>
-		</div>		
-
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Conley–Zehnder Indices and Bifurcations of the Spatial Rotating Kepler Problem
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Dongho Lee (PostDoc @ SNU – Seoul National University) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年5月19日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    	      <p>The rotating Kepler problem, which arises as a limiting case of
-    		the circular restricted three-body problem, is one of the
-    		fundamental systems in celestial mechanics. Owing to its complete
-    		integrability, its orbits can be computed explicitly.</p>
-		
-	      <p>In this talk, based on my thesis and my previous work
-		published this year, I will describe a classification of the
-		orbits of the rotating Kepler problem in terms of the angular
-		momentum and the Laplace-Runge-Lenz vector. I will then
-		present the computation of the Conley–Zehnder indices of all
-		periodic orbits below the critical energy level. These results
-		reveal, in particular, the relationship between the types of
-		bifurcations occurring in the rotating Kepler problem and the
-		corresponding Conley-Zehnder indices.
-	
-	      	</p>
-        </div>
-	</div>	    
-
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Breaking of invariant curves: from the Fermi-Ulam map to
-	      the breathing circle billiard
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Jos&eacute; Lamas (数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-		<strong>日期:</strong>
-                <span>2026年5月12日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>We consider the breathing circle billiard, namely the free
-		  motion of a point particle inside a disk whose radius varies
-		  periodically in time, with elastic reflections at the moving
-		  boundary. Since angular momentum is preserved, fixing a value
-		  $c$ reduces the dynamics to a two-dimensional exact symplectic
-		  map on a cylinder.</p>
-
-		<p>In the high-energy regime, the corresponding map is generated
-		  by a diagonally periodic twist generating function $h_c$. We
-		  study the small angular momentum regime as a perturbation of
-		  the limiting case $c = 0$, which corresponds to the Fermi-Ulam
-		  dynamics along a diameter. Using this perturbative structure
-		  and a quantitative version of Mather converse-KAM criterion,
-		  we exclude invariant Lipschitz graphs for suitable rotation
-		  numbers. Combined with Aubry-Mather theory and Forni’s
-		  theorem, this yields positive topological entropy for
-		  sufficiently small $c\geq 0$. Our result gives an essential
-		  improvement of a previous similar results obtained via the
-		  standard Mather converse-KAM criterion.
-	      	</p>
-        </div>
-	</div>
-
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              The Smale horseshoe and the geometry of chaotic motion (Part I)
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>Jos&eacute; Lamas (数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年4月28日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>The Smale horseshoe provides one of the clearest geometric
-    		mechanisms by which deterministic systems generate chaotic
-    		dynamics. Beginning with a simple process of stretching,
-    		contracting and folding a region of the phase space, the
-    		horseshoe map produces an invariant Cantor set on which the
-    		dynamics is conjugate to the full shift of two symbols. This
-    		symbolic description reveals the essential features of chaos:
-    		sensitive dependence on initial conditions, dense periodic
-    		orbits, and topological transitivity. In the context of
-    		Hamiltonian systems, the horseshoe is especially important
-    		because it models the dynamics created near transverse
-    		intersections of stable and unstable manifolds of hyperbolic
-    		saddles. Such intersections generate homoclinic tangles, which
-    		are the geometric source of chaotic motion in many conservative
-    		systems. Thus, the horseshoe map serves as a bridge between
-    		local hyperbolic manifold geometry and chaos. This talk
-    		introduces the horseshoe construction as a foundational example
-    		before studying how similar structures arise in Hamiltonian
-    		systems through homoclinic intersections and separatrix
-    		  splitting.		  
-	      	</p>
-        </div>
-	</div>
-	
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              A stochastically perturbed Kepler problem
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>王哲(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年4月21日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>In this talk, we will present a stochastically  perturbed
-    		Kepler problem, which is based on a result of A. Saha
-    		(https://link.springer.com/article/10.1007/s10569-025-10265-z).
-    		We will first introduce the stochastic Hamilton equations. Next,
-    		we consider a stochastic Kepler problem perturbed by a
-    		Hamiltonian noise affecting the angular momentum vector. We show
-    		that the angular momentum and the Laplace–Runge–Lenz vectors are
-    		conserved in magnitude and as a consequence, the distance and
-    		speed of the particle follow deterministic dynamics.  If time
-    		permits, we will also show the Moser regularization,  whereby
-    		orbits for a fixed negative energy level are transformed to the
-    		  geodesic flow on the 3-sphere.		  
-	      	</p>
-        </div>
-	</div>
-	
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Averaging principle for stochastic differential equations
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>程梦雨(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年4月7日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>Averaging principle is an effective method for investigating
-    		dynamical systems with highly oscillating components. Under
-    		suitable conditions, the fast variable can be “averaged out” to
-    		produce an averaged system, which is easier for analysis and
-    		governs the evolution over a long time scale. In this talk, we
-    		  consider the averaging principle for SDEs.		  
-	      	</p>
-        </div>
-	</div>
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Introduction to the regularization theory in Celestial Mechanics
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>刘相(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年3月31日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>This talk will give a brief introduction to the
-    		regularization theory, with a particular focus on the problems
-    		from celestial mechanics, such as the Kepler problem and the
-    		restricted three-body problem. Starting with the Kepler problem,
-    		we will demonstrate how to manipulate its equations of motion to
-    		regularize the singularity. Next, we will show the
-    		regularization method from the Hamiltonian perspective. After
-    		that, the planar circular restricted three-body problem and its
-    		regularization will be introduced. We will understand why this
-    		is important for both theoretical and numerical studies. If time
-    		  permits, the elliptic problem will also be mentioned.		  
-	      	</p>
-        </div>
-	</div>
-	
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Ergodic Theory on Horseshoes (Continued)
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>侯晓博(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年3月24日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>This talk continues our discussion of ergodic theory on
-    		horseshoes. We begin with a brief review of the horseshoe map, a
-    		classic example in differentiable dynamical systems, and its
-    		relationship with symbolic systems. We then recall some basic
-    		concepts in ergodic theory, including invariant measures,
-    		ergodic measures, and entropy. Finally, we investigate
-    		intermediate value properties and multifractal analysis on
-    		  horseshoes.		  
-	      	</p>
-        </div>
-	</div>
-	
-
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-              Full-Dimensional KAM Tori for Derivative Wave Equations
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>赵娟(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年3月17日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>This talk begins with a brief overview of KAM theory for Hamiltonian PDEs and
-		  the challenges posed by derivative nonlinearities. We then discuss recent
-		  progress on full-dimensional invariant tori for a 1D derivative nonlinear wave
-		  equation. To control frequency shifts while preserving non-resonance conditions
-		  through KAM iteration, we introduce a modified quasi-Töplitz framework unifying
-		  Töplitz-Lipschitz and quasi-Töplitz techniques. This yields linearly stable
-		  invariant tori with sub-exponentially decaying amplitudes under mild parameter
-		  assumptions.
-	      	</p>
-        </div>
-	    </div>
-	    
-	    <div class="seminar past-seminar">
-            <h2 class="seminar-title">
-            	The existence of full dimensional tori for Hamiltonian PDEs (Part I)
-            </h2>
-        <div class="meta-info">
-	    	<div class="meta-item">
-            	<strong>报告人:</strong>
-            	<span>丛洪滋(数学科学学院) </span>
-          	</div>
-            <div class="meta-item">
-				<strong>日期:</strong>
-                <span>2026年3月10日</span>
-            </div>
-            <div class="meta-item">
-                <strong>时间:</strong>
-                <span>10:00 AM - 11:30 AM</span>
-            </div>
-            <div class="meta-item">
-                <strong>地点:</strong>
-                <span>数学科学学院114</span>
-            </div>
-        </div>
-	    <div class="description">
-    		<p>In this talk， we will discuss the existence of full dimensional tori for
-Hamiltonian PDEs by KAM theory for infinite dimensional Hamiltonian systems.
-	      	</p>
-        </div>
-	    </div>
-
-
-
-
     </div>
-
 
     <!-- ARCHIVE/PAST SEMESTERS SECTION -->
     <div class="archive-section">
@@ -812,10 +250,9 @@ Hamiltonian PDEs by KAM theory for infinite dimensional Hamiltonian systems.
         </div>
 
         <div class="archive-links">
+            <a href="archive/2026_spring.html" class="semester-link">Spring 2026</a>
             <a href="archive/2025_fall.html" class="semester-link">Fall 2025</a>
-            <!-- Add more semesters as needed -->
         </div>
     </div>
-	
 </body>
 </html>
